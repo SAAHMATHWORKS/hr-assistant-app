@@ -3,8 +3,11 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
-from langchain.vectorstores import Chroma
+# from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
+
+from langchain_openai import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
 import os
 # 1. Setup OpenAI (Make sure your key is properly set in your environment)
 
