@@ -20,3 +20,16 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+hr_docs/
+pages/
+*.tmp
+*.pdf
+*.csv
+
+# Old ChromaDB locations
+chroma_store/
+path_to_your_chroma_db/
+
+# Environment files
+.env

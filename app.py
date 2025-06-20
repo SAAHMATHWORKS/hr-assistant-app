@@ -36,7 +36,7 @@ HR_PROMPT = PromptTemplate(
 )
 
 # 3. Initialize Vector Store (load your existing Chroma DB)
-persist_directory = 'path_to_your_chroma_db'  # Update this path
+persist_directory = 'chroma_db'  # Update this path
 embedding = OpenAIEmbeddings()
 vectorstore = Chroma(persist_directory=persist_directory, embedding_function=embedding)
 
