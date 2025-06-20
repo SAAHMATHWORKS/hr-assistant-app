@@ -17,8 +17,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# Get API key with fallback
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY') or st.secrets.get('OPENAI_API_KEY')
+
+if not OPENAI_API_KEY:
+    st.error("""
+        OpenAI API key not found. Please set it in:
+        1. Your environment variables (for local development)
+        2. Streamlit secrets (for cloud deployment)
+        """)
+    st.stop()  # Don't proceed without the key
 
 
 # 2. HR Prompt in French
